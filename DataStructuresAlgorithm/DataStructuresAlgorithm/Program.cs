@@ -10,7 +10,7 @@ namespace DataStructuresAlgorithm
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("CHOOSE OPTION : 1.Unordered List\n2.Exit");
+                Console.WriteLine("CHOOSE OPTION :\n 1.Unordered List\n2.OrderList\n3.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -19,10 +19,14 @@ namespace DataStructuresAlgorithm
                         unorder.ListManage();
                         break;
                     case 2:
+                        OredredList order = new OredredList();
+                        order.NumberManage();
+                        break;
+                    case 3:
                         flag = false;
                         break;
                     default:
-                        Console.WriteLine("your choice should be between 1 to 2");
+                        Console.WriteLine("your choice should be between 1 to 3");
                         break;
                 }
             }
