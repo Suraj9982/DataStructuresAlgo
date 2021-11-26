@@ -10,7 +10,7 @@ namespace DataStructuresAlgorithm
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("CHOOSE OPTION :\n 1.Unordered List\n2.OrderList\n3.Exit");
+                Console.WriteLine("CHOOSE OPTION :\n 1.Unordered List\n2.OrderList\n3.Balanced Paranthesis\n4.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -23,10 +23,14 @@ namespace DataStructuresAlgorithm
                         order.NumberManage();
                         break;
                     case 3:
+                        BalancedParenthesis balance = new BalancedParenthesis();
+                        balance.CheckParanthsis();
+                        break;
+                    case 4:
                         flag = false;
                         break;
                     default:
-                        Console.WriteLine("your choice should be between 1 to 3");
+                        Console.WriteLine("your choice should be between 1 to 4");
                         break;
                 }
             }
