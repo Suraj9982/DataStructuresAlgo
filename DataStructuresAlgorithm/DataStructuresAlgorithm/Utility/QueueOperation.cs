@@ -29,12 +29,11 @@ namespace DataStructuresAlgorithm.Utility
             Console.WriteLine("{0} is inserted into queue", newnode.data);
             return data;
         }
-        internal void DeQueue()
+        internal T DeQueue()
         {
             if (this.front == null)
             {
-                Console.WriteLine("Queue is empty");
-                return;
+                Console.WriteLine("Queue is empty"); 
             }
             Node<T> temp = this.front;
             this.front = this.front.next;
@@ -43,6 +42,18 @@ namespace DataStructuresAlgorithm.Utility
                 this.rear = null;
             }
             Console.WriteLine("{0} is deleted from the queue", temp.data);
+            return temp.data;
+        }
+        public bool IsEmpty()
+        {
+           if (this.front == null)
+            {
+                Console.WriteLine("queue is empty");
+                return true;
+            }
+           else
+                Console.WriteLine("Queue is not empty");
+            return false;
         }
     }
 }

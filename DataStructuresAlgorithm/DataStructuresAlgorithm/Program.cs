@@ -10,7 +10,7 @@ namespace DataStructuresAlgorithm
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("CHOOSE OPTION :\n 1.Unordered List\n2.OrderList\n3.Balanced Paranthesis\n4.Exit");
+                Console.WriteLine("CHOOSE OPTION :\n 1.Unordered List\n2.OrderList\n3.Balanced Paranthesis\n4.PalindromeString\n5.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -27,10 +27,16 @@ namespace DataStructuresAlgorithm
                         balance.CheckParanthsis();
                         break;
                     case 4:
+                        PalindromeString check = new PalindromeString();
+                        Console.WriteLine("enter the string");
+                        string str = Console.ReadLine();
+                        check.checkPalindrome(str);
+                        break;
+                    case 5:
                         flag = false;
                         break;
                     default:
-                        Console.WriteLine("your choice should be between 1 to 4");
+                        Console.WriteLine("your choice should be between 1 to 5");
                         break;
                 }
             }
